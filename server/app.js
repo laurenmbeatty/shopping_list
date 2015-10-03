@@ -19,9 +19,10 @@ app.get('/', function(request, response){
 });
 
 //this will be getting the console.log from the client side ajax call
-//app.get('/', function(request, response, next){
-//    console.log("")
-//})
+app.get('/note/:name?', function(request, response, next){
+    var name = request.params.name;
+    console.log("Added note: " + name);
+});
 
 var server = app.listen(3000, function() {
     var port = server.address().port;

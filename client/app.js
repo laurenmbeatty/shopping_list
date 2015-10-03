@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     event.preventDefault();
     var name = "";
 
@@ -8,7 +8,7 @@ $(document).ready(function(){
         });
     };
 
-    $(".toAppend").on('click', function(){
+    $(".toAppend").on('click', function () {
         $("input").addClass("show-input").fadeIn(1000).focus();
         $(".toAppend").fadeOut(1000);
     });

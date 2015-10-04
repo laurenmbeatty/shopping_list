@@ -2,18 +2,20 @@ $(document).ready(function () {
     event.preventDefault();
     var name = "";
 
+    //function to make .ajax call to connect server-side
     function sendNoteToServer(name) {
         $.ajax({
             url: "/note/" + name,
         });
     }
-
+    //clicking on the New Liszt heading opens up a text box, and New Liszt fades
     $(".toAppend").on('click', function () {
         $("input").addClass("show-input").fadeIn("slow").focus();
         $(".toAppend").fadeOut(1000);
     });
 
-    //on "enter", get text input value and append to ul
+    //on keystrok "enter," get text input value and append to ul;
+    //empties text box, sends console.log with item name to server
     $('input').keypress(function (e) {
         if (e.which == 13) {
             var $text = $('input:text');
@@ -37,6 +39,8 @@ $(document).ready(function () {
         }
     });
 });
+    //this code will someday allow user to click on li and edit it, then re-append
+    //it's close but glitchy
 
     //$(document).on('click', 'li', function () {
     //    console.log('clicked');

@@ -32,21 +32,15 @@ input {
 }
 
 input:focus {
-    outline-color:#E2B1B1;
+    outline-color: #E2B1B1;
 }
 
-li:hover {
-    display: block;
-    border: 1px solid #549F93;
-    background-color: #258EA6;
-    color: white;
 
-}
 
 ul {
     margin-top: 20px;
-
 }
+
 li {
     list-style-type: none;
     padding: 5px;
@@ -54,6 +48,13 @@ li {
     color: darkslategray;
     border-bottom: 1px dotted #E2B1B1;
     font-weight: bold;
+}
+
+li:hover {
+    display: block;
+    border: 1px solid #549F93;
+    background-color: #258EA6;
+    color: white;
 }
 
 .check-box {
@@ -64,10 +65,4 @@ li {
 
 .check-box:hover {
     background-color: #E2B1B1;
-}
-
-
-
-.newBox {
-    display: block;
 }

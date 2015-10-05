@@ -6,9 +6,10 @@ var path = require('path');
 
 var app = express();
 
-//serves js
+//serves public files
 app.use(express.static(path.join(__dirname, './public')));
 
+//serves index file
 app.get('/', function(request, response){
     console.log("hello");
     response.sendFile(__dirname + '/public/views/index.html');

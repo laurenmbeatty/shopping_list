@@ -14,11 +14,11 @@ $(document).ready(function () {
         $(".toAppend").fadeOut(1000);
     });
 
-    //on keystrok "enter," get text input value and append to ul;
+    //on keystroke "enter," get text input value and append to ul;
     //empties text box, sends console.log with item name to server
-    $('input').keypress(function (e) {
+    $("input").keypress(function (e) {
         if (e.which == 13) {
-            var $text = $('input:text');
+            var $text = $("input:text");
             sendNoteToServer($text.val());
             var $newListItem = $("<li class='sortableItem'>" + "<button class='btn-xs check-box'>" +
                 "<span class='glyphicon glyphicon-ok'></span></button>" + $text.val() + "</li>");
@@ -26,7 +26,7 @@ $(document).ready(function () {
             $text.val('');
 
             //clicking on checkbox removes list item with animation and puts focus back in text box
-            $('li').on('click', function() {
+            $("li").on("click", function() {
                 $(this).animate({
                     opacity: 0.0,
                     paddingLeft: '+=40'

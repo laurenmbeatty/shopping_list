@@ -1,7 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+
+body {
+    font-family: 'Architects Daughter', cursive;
+}
+
 .jumbotron {
     background-color: #258EA6;
     color: white;
-    border-bottom: 10px solid #E2B1B1
+    border-bottom: 10px solid #E2B1B1;
+    text-transform: uppercase;
 }
 
 h1 {
